@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Kristel - Cuidado Profesional de tu Visión en Piura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E31E24',
+                        secondary: '#4A90E2',
+                        dark: '#1a1a1a',
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'fade-in-down': 'fadeInDown 0.8s ease-out forwards',
+                        'fade-in-left': 'fadeInLeft 0.8s ease-out forwards',
+                        'fade-in-right': 'fadeInRight 0.8s ease-out forwards',
+                        'scale-in': 'scaleIn 0.6s ease-out forwards',
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.5s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(227, 30, 36, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(227, 30, 36, 0.6);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar personalizado */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #E31E24, #4A90E2);
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #c41820, #357ABD);
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-dark {
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Efectos de hover mejorados */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(227, 30, 36, 0.4);
+        }
+
+        /* Texto con gradiente */
+        .gradient-text {
+            background: linear-gradient(135deg, #E31E24 0%, #4A90E2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Botones premium */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+            z-index: -1;
+        }
+
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+
+        /* Animaciones de entrada con delay */
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+        .animate-delay-400 { animation-delay: 0.4s; }
+        .animate-delay-500 { animation-delay: 0.5s; }
+        .animate-delay-600 { animation-delay: 0.6s; }
+
+        /* Secciones ocultas inicialmente */
+        .hidden-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .visible-section {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efecto parallax */
+        .parallax {
+            transition: transform 0.1s ease-out;
+        }
+
+        /* Loading screen mejorado */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #E31E24 0%, #4A90E2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255,255,255,0.2);
+            border-top: 6px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Badges flotantes mejorados */
+        .floating-badge {
+            animation: float 3s ease-in-out infinite;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Imágenes con efecto hover */
+        .image-hover-effect {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-hover-effect img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-hover-effect:hover img {
+            transform: scale(1.1) rotate(2deg);
+        }
+
+        .image-hover-effect::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(227, 30, 36, 0.2), rgba(74, 144, 226, 0.2));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .image-hover-effect:hover::after {
+            opacity: 1;
+        }
+
+        /* Stats con animación */
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Header mejorado */
+        .header-blur {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+    </style>
+</head>
+<body class="bg-light text-gray-900 antialiased">
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader mb-6"></div>
+        <p class="text-white text-xl font-semibold tracking-wide">Óptica Kristel</p>
+        <p class="text-white/80 text-sm mt-2">Cargando experiencia premium...</p>
+    </div>
+
+    <!-- Header Profesional -->
+    <header class="fixed top-0 w-full glass header-blur z-50 transition-all duration-300" id="header">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo Premium -->
+                <div class="flex items-center space-x-4 group cursor-pointer">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                        <img src="Img/logo.png" alt="Óptica Kristel" class="h-16 w-16 object-contain relative z-10 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-black tracking-tight">
+                            ÓPTICA <span class="gradient-text">KRISTEL</span>
+                        </h1>
+                        <p class="text-xs text-gray-600 font-medium hidden md:block">Profesionales en Salud Visual</p>
+                    </div>
+                </div>
+                
+                <!-- Navegación Desktop -->
+                <ul class="hidden lg:flex items-center space-x-1">
+                    <li><a href="#inicio" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-all duration-300 relative group">
+                        Inicio
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="#nosotros" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-all duration-300 relative group">
+                        Nosotros
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="#servicios" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-all duration-300 relative group">
+                        Servicios
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="#lunas" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-all duration-300 relative group">
+                        Lunas
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li><a href="#especialidades" class="px-4 py-2 text-sm font-semibold text-gray-700 hover:text-primary transition-all duration-300 relative group">
+                        Especialidades
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a></li>
+                    <li>
+                        <a href="#contacto" class="btn-premium ml-4 bg-gradient-to-r from-primary to-red-600 hover:from-red-600 hover:to-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Botón Menu Mobile -->
+                <button id="menuToggle" class="lg:hidden flex flex-col space-y-1.5 z-50 group">
+                    <span class="w-7 h-0.5 bg-gray-800 transition-all duration-300 group-hover:bg-primary"></span>
+                    <span class="w-7 h-0.5 bg-gray-800 transition-all duration-300 group-hover:bg-primary"></span>
+                    <span class="w-7 h-0.5 bg-gray-800 transition-all duration-300 group-hover:bg-primary"></span>
+                </button>
+            </div>
+            
+            <!-- Menu Mobile Premium -->
+            <div id="mobileMenu" class="lg:hidden fixed inset-0 bg-gradient-to-br from-primary via-red-600 to-secondary transform translate-x-full transition-transform duration-500 pt-24">
+                <ul class="flex flex-col items-center space-y-8 px-8 py-12">
+                    <li class="opacity-0 mobile-menu-item"><a href="#inicio" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Inicio</a></li>
+                    <li class="opacity-0 mobile-menu-item"><a href="#nosotros" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Nosotros</a></li>
+                    <li class="opacity-0 mobile-menu-item"><a href="#servicios" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Servicios</a></li>
+                    <li class="opacity-0 mobile-menu-item"><a href="#lunas" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Lunas</a></li>
+                    <li class="opacity-0 mobile-menu-item"><a href="#especialidades" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Especialidades</a></li>
+                    <li class="opacity-0 mobile-menu-item"><a href="#contacto" class="text-3xl text-white hover:text-gray-200 transition-colors font-bold">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero Premium -->
+    <section id="inicio" class="min-h-screen flex items-center pt-28 pb-20 px-6 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse-glow"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Contenido Principal -->
+                <div class="space-y-8">
+                    <!-- Badge -->
+                    <div class="opacity-0 animate-fade-in-down animate-delay-100">
+                        <span class="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-lg border border-gray-100">
+                            <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                            <span class="text-sm font-bold text-gray-700">+5 años transformando vidas</span>
+                        </span>
+                    </div>
+
+                    <!-- Título Principal -->
+                    <div class="space-y-4">
+                        <h2 class="text-5xl md:text-7xl font-black leading-tight opacity-0 animate-fade-in-left animate-delay-200">
+                            Tu Visión,<br>
+                            <span class="gradient-text">Nuestra Pasión</span>
+                        </h2>
+                        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-xl opacity-0 animate-fade-in-left animate-delay-300">
+                            Tecnología de vanguardia y atención personalizada para el cuidado integral de tu salud visual en Piura.
+                        </p>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animate-delay-400">
+                        <a href="#servicios" class="btn-premium group bg-gradient-to-r from-primary to-red-600 hover:from-red-700 hover:to-primary text-white px-8 py-4 rounded-full font-bold text-base shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-3">
+                            Explorar Servicios
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="#contacto" class="btn-premium group bg-white hover:bg-gray-50 text-gray-800 px-8 py-4 rounded-full font-bold text-base shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-3 border-2 border-gray-200">
+                            Agendar Cita
+                            <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Stats Profesionales -->
+                    <div class="grid grid-cols-3 gap-6 pt-8 opacity-0 animate-fade-in-up animate-delay-500">
+                        <div class="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-4xl font-black stat-number bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">5+</div>
+                            <div class="text-sm font-semibold text-gray-600 mt-2">Años de<br>Experiencia</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-4xl font-black stat-number bg-gradient-to-r from-secondary to-blue-600 bg-clip-text text-transparent">2</div>
+                            <div class="text-sm font-semibold text-gray-600 mt-2">Sedes en<br>Piura</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-white/60 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="text-4xl font-black stat-number bg-gradient-to-r from-primary to-red-600 bg-clip-text text-transparent">100%</div>
+                            <div class="text-sm font-semibold text-gray-600 mt-2">Clientes<br>Satisfechos</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Imagen Hero con efectos premium -->
+                <div class="relative opacity-0 animate-fade-in-right animate-delay-300">
+                    <!-- Glow effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-[3rem] transform rotate-6 blur-3xl scale-105"></div>
+                    
+                    <!-- Imagen principal -->
+                    <div class="relative image-hover-effect rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="Img/1.jpg" alt="Óptica Kristel" class="w-full h-[600px] object-cover">
+                    </div>
+
+                    <!-- Badges flotantes premium -->
+                    <div class="absolute -top-6 -left-6 floating-badge bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-5 animate-delay-500" style="animation-delay: 0.5s;">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg">
+                                👁️
+                            </div>
+                            <div>
+                                <div class="text-sm font-black text-gray-800">Exámenes</div>
+                                <div class="text-xs font-semibold text-gray-500">Computarizados</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-6 -right-6 floating-badge bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-5" style="animation-delay: 1s;">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-secondary to-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg">
+                                👓
+                            </div>
+                            <div>
+                                <div class="text-sm font-black text-gray-800">Monturas</div>
+                                <div class="text-xs font-semibold text-gray-500">Internacionales</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros Premium -->
+    <section id="nosotros" class="py-32 px-6 bg-white relative overflow-hidden hidden-section">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-secondary/5 to-primary/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <!-- Encabezado de sección -->
+            <div class="text-center mb-20">
+                <span class="inline-flex items-center gap-2 bg-secondary/10 px-5 py-2.5 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                    <span class="text-sm font-bold text-secondary">Nuestra Historia</span>
+                </span>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    ¿Quiénes <span class="gradient-text">Somos?</span>
+                </h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <!-- Contenido principal -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
+                <div class="space-y-6">
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        En <span class="font-bold text-primary">Óptica Kristel</span>, nuestra misión es transformar vidas a través del cuidado profesional de la salud visual. Ofrecemos soluciones ópticas de vanguardia con atención personalizada y precios justos.
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Con más de 5 años de experiencia y la confianza de miles de clientes, hoy contamos con <span class="font-bold text-secondary">dos sedes estratégicas en Piura</span>, brindando acceso conveniente a servicios ópticos de clase mundial.
+                    </p>
+                    
+                    <!-- Features destacados -->
+                    <div class="grid grid-cols-2 gap-4 pt-6">
+                        <div class="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-br from-red-50 to-transparent hover:shadow-lg transition-all duration-300">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 text-sm">Calidad Certificada</div>
+                                <div class="text-xs text-gray-600">Productos garantizados</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-3 p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-transparent hover:shadow-lg transition-all duration-300">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 text-sm">Atención Premium</div>
+                                <div class="text-xs text-gray-600">Servicio personalizado</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-[3rem] transform -rotate-3 blur-2xl"></div>
+                    <div class="relative image-hover-effect rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src="Img/2.jpg" alt="Nosotros" class="w-full h-[500px] object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misión, Visión, Valores - Diseño Premium -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Misión -->
+                <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            🎯
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Nuestra Misión</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Brindar soluciones visuales integrales que mejoren la calidad de vida, ofreciendo productos confiables, tecnología de punta y atención cercana.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Visión -->
+                <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-secondary to-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            👁️
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Nuestra Visión</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Ser la óptica líder en Piura, reconocida por la excelencia en el servicio, innovación tecnológica y compromiso con la comunidad.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Valores -->
+                <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                    <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-4xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ⭐
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900 mb-4">Nuestros Valores</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <span class="w-2 h-2 bg-primary rounded-full"></span>
+                                Excelencia en cada producto
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                                Honestidad y transparencia
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <span class="w-2 h-2 bg-primary rounded-full"></span>
+                                Compromiso con el cliente
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios Premium -->
+    <section id="servicios" class="py-32 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden hidden-section">
+        <!-- Decoración -->
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto relative z-10">
+            <!-- Encabezado -->
+            <div class="text-center mb-20">
+                <span class="inline-flex items-center gap-2 bg-primary/10 px-5 py-2.5 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    <span class="text-sm font-bold text-primary">Lo que ofrecemos</span>
+                </span>
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                    Nuestros <span class="gradient-text">Servicios</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Soluciones integrales de salud visual con tecnología de vanguardia
+                </p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6"></div>
+            </div>
+            
+            <!-- Grid de servicios -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/3.jpg" alt="Exámenes de Vista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">👁️‍🗨️</div>
+                            <h3 class="text-2xl font-black text-white">Exámenes de Vista</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Evaluación computarizada y con optometrista especializado para diagnóstico preciso de tu salud visual.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/4.jpg" alt="Lentes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">👓</div>
+                            <h3 class="text-2xl font-black text-white">Lentes Personalizados</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Lentes con medida adaptados a tus necesidades específicas, con tecnología de última generación.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-secondary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/5.jpg" alt="Monturas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">🕶️</div>
+                            <h3 class="text-2xl font-black text-white">Monturas Premium</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Amplia selección de monturas nacionales e internacionales de las mejores marcas del mercado.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/6.jpg" alt="Asesoría" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">💼</div>
+                            <h3 class="text-2xl font-black text-white">Asesoría Personalizada</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Orientación experta según tu tipo de rostro, estilo de vida y presupuesto disponible.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-secondary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/7.jpg" alt="Gafas de Sol" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">😎</div>
+                            <h3 class="text-2xl font-black text-white">Gafas de Sol</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Protección UV 100% con diseños modernos que combinan estilo y funcionalidad.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="Img/8.jpg" alt="Mantenimiento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="text-5xl mb-2">🔧</div>
+                            <h3 class="text-2xl font-black text-white">Mantenimiento</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed">
+                            Servicio completo de mantenimiento, ajuste y reparación profesional de tus lentes.
+                        </p>
+                        <div class="mt-4 flex items-center gap-2 text-secondary font-bold text-sm group-hover:gap-3 transition-all">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Sección Lunas Premium -->
+<section id="lunas" class="py-32 px-6 bg-white relative overflow-hidden hidden-section">
+    <!-- Decoración de fondo -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-secondary/5 to-primary/5 rounded-full blur-3xl"></div>
+    
+    <div class="container mx-auto relative z-10">
+        <!-- Encabezado de sección -->
+        <div class="text-center mb-20">
+            <span class="inline-flex items-center gap-2 bg-secondary/10 px-5 py-2.5 rounded-full mb-6">
+                <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                <span class="text-sm font-bold text-secondary">Tecnología Óptica</span>
+            </span>
+            <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                Tipos de <span class="gradient-text">Lunas</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+                Soluciones visuales con la más alta tecnología y calidad certificada
+            </p>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- Grid de Tipos de Lunas -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+            <!-- Luna 1: Monofocales -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Lunas Monofocales</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Diseñadas para corregir un solo campo visual. Perfectas para ver de lejos o de cerca con máxima claridad y precisión.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        Visión clara y nítida
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna 2: Bifocales -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-secondary to-blue-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Lunas Bifocales</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Dos campos visuales separados en un solo lente. Solución práctica para ver de lejos y de cerca sin cambiar de gafas.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-secondary font-bold text-sm">
+                        <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                        Doble funcionalidad
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna 3: Fotocromáticas -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Lunas Fotocromáticas</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Tecnología inteligente que se adapta automáticamente a la luz. Se oscurecen con el sol y aclaran en interiores.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        Adaptación automática
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna 4: Para Pantallas -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-secondary to-blue-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Lunas para Pantallas</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Filtro especializado contra luz azul. Protección esencial para trabajo digital prolongado y reducción de fatiga visual.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-secondary font-bold text-sm">
+                        <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                        Protección digital
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna 5: Multifocales -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Multifocales Progresivas</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        La solución más avanzada: visión de cerca, intermedia y lejos en un solo lente. Transición suave sin líneas visibles.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-primary font-bold text-sm">
+                        <span class="w-2 h-2 bg-primary rounded-full"></span>
+                        Tecnología premium
+                    </div>
+                </div>
+            </div>
+
+            <!-- Luna 6: Polarizadas -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:-translate-y-2">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/10 to-transparent rounded-full -mr-20 -mt-20 group-hover:scale-150 transition-transform duration-500"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-secondary to-blue-600 rounded-2xl flex items-center justify-center text-white text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                            ✓
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-900">Lunas Polarizadas</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Eliminan reflejos y mejoran el contraste. Ideales para conducción, deportes acuáticos y actividades al aire libre.
+                    </p>
+                    <div class="mt-6 flex items-center gap-2 text-secondary font-bold text-sm">
+                        <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                        Sin reflejos
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Materiales Premium -->
+        <div class="relative bg-gradient-to-br from-slate-50 to-blue-50 rounded-[3rem] p-12 md:p-16 overflow-hidden shadow-2xl">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <!-- Contenido -->
+                <div class="space-y-6">
+                    <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        <span class="text-sm font-bold text-gray-700">Materiales Certificados</span>
+                    </span>
+                    
+                    <h3 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+                        ¿Qué tipo de <span class="gradient-text">materiales</span> usamos?
+                    </h3>
+                    
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Trabajamos exclusivamente con <span class="font-bold text-primary">lunas orgánicas de resina, policarbonato y alto índice</span> según el diagnóstico específico de cada cliente.
+                    </p>
+
+                    <!-- Features de materiales -->
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 bg-white/60 backdrop-blur-sm p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Ligereza extrema</div>
+                                <div class="text-sm text-gray-600">Materiales ultraligeros para máxima comodidad</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-white/60 backdrop-blur-sm p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-blue-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Durabilidad garantizada</div>
+                                <div class="text-sm text-gray-600">Resistencia superior a impactos y rayones</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 bg-white/60 backdrop-blur-sm p-4 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-red-600 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-bold text-gray-900 mb-1">Estética refinada</div>
+                                <div class="text-sm text-gray-600">Lentes delgados para un look elegante</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen con efectos premium -->
+                <div class="relative">
+                    <!-- Glow effect -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full transform scale-105 blur-3xl"></div>
+                    
+                    <!-- Imagen circular -->
+                    <div class="relative image-hover-effect rounded-full overflow-hidden shadow-2xl">
+                        <img src="Img/9.jpg" alt="Materiales de Lunas" class="w-full h-[500px] object-cover">
+                    </div>
+
+                    <!-- Badge flotante -->
+                    <div class="absolute -bottom-6 -left-6 floating-badge bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl p-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary to-red-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-lg">
+                                💎
+                            </div>
+                            <div>
+                                <div class="text-sm font-black text-gray-800">Calidad</div>
+                                <div class="text-xs font-semibold text-gray-500">Certificada</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección Tratamientos - SE INSERTA DENTRO DE LA SECCIÓN LUNAS -->
+<!-- Colocar DESPUÉS de la sección de Materiales y ANTES del CTA final -->
+
+        <!-- Tratamientos para Lunas Premium -->
+        <div class="mt-32">
+            <!-- Encabezado de Tratamientos -->
+            <div class="text-center mb-16">
+                <span class="inline-flex items-center gap-2 bg-primary/10 px-5 py-2.5 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    <span class="text-sm font-bold text-primary">Protección Avanzada</span>
+                </span>
+                <h3 class="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                    Tratamientos para tus <span class="gradient-text">Lunas</span>
+                </h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Tecnologías especializadas para maximizar el rendimiento y durabilidad de tus lentes
+                </p>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6"></div>
+            </div>
+            
+            <!-- Grid de Tratamientos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Tratamiento 1: Antirreflejo -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary hover:to-red-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <!-- Decoración de fondo -->
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-red-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-primary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Antirreflejo</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Elimina reflejos molestos de la superficie del lente para visión más nítida.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 2: Filtro Luz Azul -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-blue-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-secondary to-blue-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-secondary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Filtro Luz Azul</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Bloquea la luz azul dañina de pantallas digitales y dispositivos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 3: Fotocromático -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary hover:to-red-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-red-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-primary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Fotocromático</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Se oscurecen automáticamente con luz solar y aclaran en interiores.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 4: Antirrayas -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-blue-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-secondary to-blue-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-secondary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Antirrayas</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Refuerza la superficie del lente para prevenir rayaduras y daños.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 5: Filtro UV 100% -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary hover:to-red-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-red-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-primary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Filtro UV 100%</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Protección total contra rayos ultravioleta dañinos del sol.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 6: Hidrofóbica -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-blue-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-secondary to-blue-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-secondary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Hidrofóbica</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Repele el agua y evita que se formen gotas en la superficie.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 7: Oleofóbico -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-primary hover:to-red-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-red-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-primary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Oleofóbico</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Repele aceites, grasa y huellas dactilares para mayor limpieza.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tratamiento 8: Tinturados -->
+                <div class="group relative bg-gradient-to-br from-gray-50 to-white p-6 rounded-2xl hover:bg-gradient-to-br hover:from-secondary hover:to-blue-600 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer shadow-lg hover:shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-white/20 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-8 h-8 bg-gradient-to-br from-secondary to-blue-600 group-hover:bg-white rounded-xl flex items-center justify-center text-white group-hover:text-secondary text-sm font-bold shadow-lg transition-all duration-300">
+                                ✓
+                            </div>
+                            <h4 class="text-lg font-black text-gray-900 group-hover:text-white transition-colors">Tinturados</h4>
+                        </div>
+                        <p class="text-sm text-gray-700 group-hover:text-white/90 leading-relaxed transition-colors">
+                            Lentes con coloración fija personalizada en múltiples tonos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner informativo adicional -->
+            <div class="mt-16 relative bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 rounded-3xl p-8 md:p-12 overflow-hidden">
+                <div class="absolute top-0 left-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-0 w-40 h-40 bg-secondary/20 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 text-center">
+                    <h4 class="text-2xl md:text-3xl font-black text-gray-900 mb-4">
+                        ¿No sabes qué tratamiento necesitas?
+                    </h4>
+                    <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                        Nuestros especialistas te ayudarán a elegir la combinación perfecta de tratamientos según tu estilo de vida y necesidades visuales.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-full shadow-lg">
+                            <span class="w-2 h-2 bg-primary rounded-full"></span>
+                            <span class="text-sm font-bold text-gray-800">Asesoría Gratuita</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-5 py-3 rounded-full shadow-lg">
+                            <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                            <span class="text-sm font-bold text-gray-800">Evaluación Profesional</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Sección Especialidades Premium -->
+<section id="especialidades" class="py-32 px-6 relative overflow-hidden hidden-section">
+    <!-- Fondo con gradiente -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-blue-50"></div>
+    
+    <!-- Decoraciones de fondo -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary/5 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-secondary/5 to-transparent rounded-full blur-3xl"></div>
+    
+    <div class="container mx-auto relative z-10">
+        <!-- Encabezado de sección -->
+        <div class="text-center mb-20">
+            <span class="inline-flex items-center gap-2 bg-primary/10 px-5 py-2.5 rounded-full mb-6">
+                <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                <span class="text-sm font-bold text-primary">Expertos en Salud Visual</span>
+            </span>
+            <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                Nuestras <span class="gradient-text">Especialidades</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+                Servicios especializados con tecnología de vanguardia y atención personalizada
+            </p>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- Grid de Especialidades -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <!-- Especialidad 1: Optometría Clínica -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-t-4 border-primary hover:-translate-y-2">
+                <!-- Decoración de fondo -->
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div class="relative z-10">
+                    <!-- Icono -->
+                    <div class="mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <img src="Img/11.png" alt="Optometría Clínica" class="h-24 w-24 object-contain relative z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido -->
+                    <h3 class="text-2xl font-black text-primary mb-4 text-center group-hover:scale-105 transition-transform duration-300">
+                        Optometría Clínica
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Evaluación profesional y diagnóstico preciso de tu salud visual con tecnología de última generación.
+                    </p>
+                    
+                    <!-- Indicador hover -->
+                    <div class="mt-6 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="inline-flex items-center gap-2 text-primary font-bold text-sm">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 2: Lentes Multifocales -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-t-4 border-secondary hover:-translate-y-2">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-secondary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <img src="Img/12.png" alt="Lentes Multifocales" class="h-24 w-24 object-contain relative z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-secondary mb-4 text-center group-hover:scale-105 transition-transform duration-300">
+                        Lentes Multifocales Progresivos
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Soluciones avanzadas para una visión perfecta a todas las distancias sin líneas visibles.
+                    </p>
+                    
+                    <div class="mt-6 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="inline-flex items-center gap-2 text-secondary font-bold text-sm">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 3: Asesoría Visual -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-t-4 border-primary hover:-translate-y-2">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <img src="Img/13.png" alt="Asesoría Visual" class="h-24 w-24 object-contain relative z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-primary mb-4 text-center group-hover:scale-105 transition-transform duration-300">
+                        Asesoría Visual Personalizada
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Te ayudamos a elegir el lente perfecto según tu rostro, estilo de vida y necesidades específicas.
+                    </p>
+                    
+                    <div class="mt-6 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="inline-flex items-center gap-2 text-primary font-bold text-sm">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 4: Protección Digital -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-t-4 border-secondary hover:-translate-y-2">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-secondary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <img src="Img/14.png" alt="Protección Digital" class="h-24 w-24 object-contain relative z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-secondary mb-4 text-center group-hover:scale-105 transition-transform duration-300">
+                        Protección Visual Digital
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Lentes especiales con filtro azul para proteger tus ojos del uso prolongado de pantallas.
+                    </p>
+                    
+                    <div class="mt-6 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="inline-flex items-center gap-2 text-secondary font-bold text-sm">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 5: Monturas según Rostro -->
+            <div class="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-t-4 border-primary hover:-translate-y-2">
+                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+                
+                <div class="relative z-10">
+                    <div class="mb-6 flex justify-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                            <img src="Img/15.png" alt="Monturas según Rostro" class="h-24 w-24 object-contain relative z-10 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-black text-primary mb-4 text-center group-hover:scale-105 transition-transform duration-300">
+                        Monturas según Tipo de Rostro
+                    </h3>
+                    <p class="text-gray-700 leading-relaxed text-center">
+                        Asesoría especializada para encontrar la montura que mejor se adapte a las características de tu rostro.
+                    </p>
+                    
+                    <div class="mt-6 flex justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span class="inline-flex items-center gap-2 text-primary font-bold text-sm">
+                            Más información
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Especialidad 6: Espacio adicional (si necesitas agregar más) -->
+            <div class="group relative bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border-2 border-dashed border-primary/30 hover:-translate-y-2 flex items-center justify-center">
+                <div class="text-center">
+                    <div class="text-6xl mb-4">✨</div>
+                    <h3 class="text-xl font-black text-gray-800 mb-2">
+                        Y mucho más
+                    </h3>
+                    <p class="text-gray-600">
+                        Visítanos para conocer todos nuestros servicios especializados
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Banner con imagen destacada -->
+        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl group">
+            <!-- Overlay con gradiente -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 flex items-end p-10 md:p-16">
+                <div class="max-w-2xl">
+                    <span class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                        <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        <span class="text-sm font-bold text-white">Excelencia comprobada</span>
+                    </span>
+                    <h3 class="text-3xl md:text-4xl font-black text-white mb-3">
+                        Tu salud visual en las mejores manos
+                    </h3>
+                    <p class="text-lg text-white/90 mb-6">
+                        Tecnología avanzada y atención profesional para el cuidado integral de tu visión
+                    </p>
+                    <a href="#contacto" class="btn-premium inline-flex items-center gap-3 bg-white text-gray-900 hover:bg-gray-100 px-6 py-3 rounded-full font-bold text-base shadow-xl hover:shadow-2xl transition-all duration-300">
+                        Agenda tu cita
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Imagen de fondo -->
+            <img src="Img/10.jpg" alt="Especialidades Óptica Kristel" class="w-full h-[500px] md:h-[600px] object-cover group-hover:scale-105 transition-transform duration-700">
+        </div>
+    </div>
+</section>
+
+    <!-- Sección Lentes de Contacto -->
+    <section class="py-20 px-4 bg-white section-transition">
+        <div class="container mx-auto">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl shadow-2xl p-12 text-center max-w-4xl mx-auto border-2 border-secondary/20">
+                <div class="mb-6 flex justify-center">
+                    <div class="w-20 h-20 bg-gradient-to-br from-secondary to-blue-600 rounded-full flex items-center justify-center text-4xl animate-float">
+                        👁️
+                    </div>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold text-dark mb-6">
+                    ¿Lentes de <span class="gradient-text">Contacto</span>?
+                </h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto">
+                    Sí, contamos con lentes de contacto blandos para miopía, astigmatismo y presbicia, así como líquidos y kits de limpieza. La adaptación se realiza con evaluación previa.
+                </p>
+                <a href="https://w.app/0dthy4" target="_blank" class="btn-shine inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    MÁS INFORMACIÓN
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Sección Contacto Premium -->
+<section id="contacto" class="py-32 px-6 bg-white relative overflow-hidden hidden-section">
+    <!-- Decoraciones de fondo -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary/5 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-secondary/5 to-transparent rounded-full blur-3xl"></div>
+    
+    <div class="container mx-auto relative z-10">
+        <!-- Encabezado -->
+        <div class="text-center mb-20">
+            <span class="inline-flex items-center gap-2 bg-secondary/10 px-5 py-2.5 rounded-full mb-6">
+                <span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>
+                <span class="text-sm font-bold text-secondary">Estamos aquí para ti</span>
+            </span>
+            <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-6">
+                <span class="gradient-text">Contáctanos</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+                Agenda tu cita o visítanos en cualquiera de nuestras dos sedes en Piura
+            </p>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-12 mb-20">
+            <!-- Columna Izquierda: Información de contacto -->
+            <div class="space-y-8">
+                <!-- Intro -->
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">
+                        ¿Dónde nos <span class="gradient-text">encontramos?</span>
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Dos sedes estratégicamente ubicadas en Piura para brindarte el mejor servicio y comodidad
+                    </p>
+                </div>
+
+                <!-- Sede 1: Jr. Junín -->
+                <div class="group relative bg-gradient-to-br from-primary via-red-600 to-red-700 p-8 rounded-3xl shadow-xl text-white overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                    <!-- Efecto hover -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-black/0 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <!-- Decoración -->
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                            <span class="text-xs font-bold">Sede Principal</span>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                📍
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black mb-2">Jr. Junín</h4>
+                                <p class="text-lg text-white/90">Jr. Junín 455, Piura</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Info adicional -->
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 text-white/90">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                                <span class="font-semibold">+51 970 798 463</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-white/90">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                </svg>
+                                <span class="font-semibold">Lun - Sáb: 9:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://maps.app.goo.gl/b3BdTthaMz78aQGr8" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 group/btn shadow-lg">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Ver en Google Maps
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sede 2: Av. Sánchez Cerro -->
+                <div class="group relative bg-gradient-to-br from-secondary via-blue-600 to-blue-700 p-8 rounded-3xl shadow-xl text-white overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-br from-black/0 to-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                            <span class="text-xs font-bold">Segunda Sede</span>
+                        </div>
+                        
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-3xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                📍
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black mb-2">Av. Sánchez Cerro</h4>
+                                <p class="text-lg text-white/90">Av. Sánchez Cerro 862, Piura</p>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center gap-3 text-white/90">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                                <span class="font-semibold">+51 944 496 830</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-white/90">
+                                <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+                                </svg>
+                                <span class="font-semibold">Lun - Sáb: 9:00 AM - 8:00 PM</span>
+                            </div>
+                        </div>
+                        
+                        <a href="https://maps.app.goo.gl/ZvTenr3wKF6fNHWJA" target="_blank" class="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 group/btn shadow-lg">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Ver en Google Maps
+                            <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Redes Sociales Premium -->
+                <div class="relative bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/5 to-transparent rounded-full"></div>
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-2xl font-black text-gray-900 mb-3">Síguenos en redes</h4>
+                        <p class="text-gray-600 mb-6">Mantente al día con nuestras promociones y novedades</p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://www.facebook.com/profile.php?id=61552679300988" target="_blank" class="btn-premium group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </a>
+                            
+                            <a href="https://www.instagram.com/optica__kristel" target="_blank" class="btn-premium group flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                Instagram
+                            </a>
+                            
+                            <a href="https://www.tiktok.com/@optica.kristel.jun" target="_blank" class="btn-premium group flex items-center gap-3 bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                                </svg>
+                                TikTok
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario de contacto -->
+            <div class="relative">
+                <div class="sticky top-24">
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+                        <div class="mb-8">
+                            <h3 class="text-3xl font-black text-gray-900 mb-3">Envíanos un mensaje</h3>
+                            <p class="text-gray-600">Completa el formulario y nos pondremos en contacto contigo lo antes posible</p>
+                        </div>
+                        
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label class="block text-gray-800 font-bold mb-2 text-sm">Nombre completo *</label>
+                                <input type="text" id="nombreCompleto" required class="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-all duration-300 bg-white hover:border-gray-300" placeholder="Ej: Juan Pérez García">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-800 font-bold mb-2 text-sm">Correo electrónico *</label>
+                                <input type="email" id="correoElectronico" required class="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-all duration-300 bg-white hover:border-gray-300" placeholder="tu@email.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-800 font-bold mb-2 text-sm">Teléfono *</label>
+                                <input type="tel" id="telefono" required class="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-all duration-300 bg-white hover:border-gray-300" placeholder="+51 999 999 999">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-800 font-bold mb-2 text-sm">Mensaje *</label>
+                                <textarea id="mensaje" required rows="5" class="w-full px-4 py-3.5 rounded-xl border-2 border-gray-200 focus:border-primary focus:outline-none transition-all duration-300 resize-none bg-white hover:border-gray-300" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-premium w-full bg-gradient-to-r from-primary to-red-600 hover:from-red-700 hover:to-primary text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 group">
+                                Enviar Mensaje
+                                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                            </button>
+
+                            <p class="text-xs text-gray-500 text-center">
+                                Al enviar este formulario, aceptas que procesemos tus datos para contactarte
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer Premium - REEMPLAZAR COMPLETAMENTE -->
+<footer class="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white overflow-hidden mt-20">
+    <!-- Decoraciones de fondo -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 pt-16 pb-8 relative z-10">
+        <!-- Grid principal del footer -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            <!-- Columna 1: Logo y descripción -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center space-x-3 mb-6 group cursor-pointer">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                        <img src="Img/logo.png" alt="Óptica Kristel" class="h-14 w-14 object-contain relative z-10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    </div>
+                    <div>
+                        <h3 class="text-xl md:text-2xl font-black leading-tight">ÓPTICA</h3>
+                        <h3 class="text-xl md:text-2xl font-black text-primary leading-tight">KRISTEL</h3>
+                    </div>
+                </div>
+                <p class="text-gray-400 leading-relaxed mb-6 text-sm md:text-base">
+                    Tu visión, nuestra pasión. Más de 5 años brindando soluciones ópticas de calidad en Piura.
+                </p>
+                
+                <!-- Redes sociales -->
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=61552679300988" target="_blank" class="group w-10 h-10 md:w-11 md:h-11 bg-white/10 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/optica__kristel" target="_blank" class="group w-10 h-10 md:w-11 md:h-11 bg-white/10 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@optica.kristel.jun" target="_blank" class="group w-10 h-10 md:w-11 md:h-11 bg-white/10 hover:bg-black rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces Rápidos -->
+            <div>
+                <h4 class="text-lg md:text-xl font-black mb-4 md:mb-6 flex items-center gap-2">
+                    <span class="w-1 h-6 bg-gradient-to-b from-primary to-red-600 rounded-full"></span>
+                    Enlaces Rápidos
+                </h4>
+                <ul class="space-y-2 md:space-y-3">
+                    <li>
+                        <a href="#inicio" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#nosotros" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Nosotros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#servicios" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#lunas" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Lunas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#especialidades" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Especialidades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contacto" class="group flex items-center gap-2 text-sm md:text-base text-gray-400 hover:text-primary transition-all duration-300">
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Nuestras Sedes -->
+            <div>
+                <h4 class="text-lg md:text-xl font-black mb-4 md:mb-6 flex items-center gap-2">
+                    <span class="w-1 h-6 bg-gradient-to-b from-secondary to-blue-600 rounded-full"></span>
+                    Nuestras Sedes
+                </h4>
+                <ul class="space-y-3 md:space-y-4">
+                    <li class="group">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                            <div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <span class="text-xl">📍</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white mb-1 text-sm md:text-base">Jr. Junín</div>
+                                <div class="text-xs md:text-sm text-gray-400">Jr. Junín 455, Piura</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="group">
+                        <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                            <div class="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                                <span class="text-xl">📍</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-white mb-1 text-sm md:text-base">Av. Sánchez Cerro</div>
+                                <div class="text-xs md:text-sm text-gray-400">Av. Sánchez Cerro 862, Piura</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Horarios y Contacto -->
+            <div>
+                <h4 class="text-lg md:text-xl font-black mb-4 md:mb-6 flex items-center gap-2">
+                    <span class="w-1 h-6 bg-gradient-to-b from-primary to-red-600 rounded-full"></span>
+                    Horarios
+                </h4>
+                <div class="space-y-3 md:space-y-4">
+                    <div class="flex items-center gap-3 text-gray-400">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-white text-sm md:text-base">Lun - Sáb</div>
+                            <div class="text-xs md:text-sm">9:00 AM - 8:00 PM</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 text-gray-400">
+                        <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                        </svg>
+                        <div>
+                            <div class="font-semibold text-white text-sm md:text-base">Teléfono</div>
+                            <div class="text-xs md:text-sm">+51 944 496 830</div>
+                        </div>
+                    </div>
+
+                    <!-- Botón WhatsApp destacado -->
+                    <a href="https://wa.me/51944496830" target="_blank" class="group flex items-center gap-2 md:gap-3 bg-green-500 hover:bg-green-600 px-3 md:px-4 py-2 md:py-3 rounded-xl font-bold text-white transition-all duration-300 hover:scale-105 shadow-lg text-sm md:text-base">
+                        <svg class="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        <span class="hidden sm:inline">Chatea con nosotros</span>
+                        <span class="sm:hidden">Chat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="border-t border-white/10 pt-6 md:pt-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm">
+                <div class="text-gray-400 text-center md:text-left">
+                    <p class="flex items-center justify-center md:justify-start gap-2 mb-1">
+                        © 2025 Óptica Kristel. Todos los derechos reservados.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Diseñado con <span class="text-primary animate-pulse">❤️</span> para cuidar tu visión
+                    </p>
+                </div>
+                
+                <div class="flex items-center gap-4 md:gap-6 text-xs md:text-sm text-gray-400">
+                    <a href="#" class="hover:text-primary transition-colors">Política de Privacidad</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="hover:text-primary transition-colors">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>        
+    
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Menu Toggle Mobile con animaciones
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        const menuItems = mobileMenu.querySelectorAll('.mobile-menu-item');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('translate-x-full');
+            
+            if (!isOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.animation = 'fadeInUp 0.5s ease-out forwards';
+                        item.style.opacity = '1';
+                    }, index * 100);
+                });
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuItems.forEach(item => {
+                    item.style.opacity = '0';
+                });
+            }
+            
+            const spans = menuToggle.querySelectorAll('span');
+            if (!isOpen) {
+                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                const spans = menuToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+                menuItems.forEach(item => item.style.opacity = '0');
+            });
+        });
+
+        // Header con efecto al scroll
+        let lastScroll = 0;
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.padding = '0.75rem 0';
+                header.style.boxShadow = '0 10px 30px -10px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    // Manejo del formulario de contacto - ENVÍA A WHATSAPP
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const nombre = document.getElementById('nombreCompleto').value;
+            const correo = document.getElementById('correoElectronico').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            // Crear mensaje para WhatsApp
+            const mensajeWhatsApp = `Hola, soy ${nombre}%0A%0ACorreo: ${correo}%0ATeléfono: ${telefono}%0A%0AMensaje: ${mensaje}`;
+            
+            // Abrir WhatsApp
+            const numeroWhatsApp = '51944496830';
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;
+            window.open(urlWhatsApp, '_blank');
+            
+            // Crear notificación de éxito
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-24 right-8 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl z-50 animate-slideInRight';
+            notification.innerHTML = `
+                <div class="flex items-center gap-3">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <div>
+                        <div class="font-bold">¡Redirigiendo a WhatsApp!</div>
+                        <div class="text-sm">Tu mensaje será enviado</div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+            
+            contactForm.reset();
+        });
+
+        // Intersection Observer para animaciones al scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('hidden-section');
+                    entry.target.classList.add('visible-section');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.hidden-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
