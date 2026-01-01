@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óptica Kristel - Encuéntranos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d0a0a 50%, #0a1929 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: slideDown 0.6s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #e74c3c, #00bcd4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 10px 30px rgba(231, 76, 60, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 15px 40px rgba(231, 76, 60, 0.6);
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #e74c3c, #00bcd4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            margin: 30px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid #e74c3c;
+            color: #00bcd4;
+        }
+
+        .link-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out backwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .link-card:nth-child(1) { animation-delay: 0.1s; }
+        .link-card:nth-child(2) { animation-delay: 0.2s; }
+        .link-card:nth-child(3) { animation-delay: 0.3s; }
+        .link-card:nth-child(4) { animation-delay: 0.4s; }
+        .link-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+            border-color: #e74c3c;
+        }
+
+        .link-card:active {
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tiktok { background: linear-gradient(45deg, #000000, #ff0050, #00f2ea); }
+        .facebook { background: #1877f2; }
+        .web { background: linear-gradient(45deg, #e74c3c, #00bcd4); }
+        .location { background: linear-gradient(45deg, #34a853, #4285f4); }
+        .whatsapp { background: #25d366; }
+
+        .link-content {
+            flex: 1;
+        }
+
+        .link-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .link-subtitle {
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        .arrow {
+            color: #e74c3c;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .link-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .decorative-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e74c3c, #00bcd4, transparent);
+            margin: 30px 0;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-glasses"></i>
+            </div>
+            <h1>Óptica Kristel</h1>
+            <p class="subtitle">Tu visión, nuestra pasión</p>
+        </div>
+
+        <div class="decorative-line"></div>
+
+        <h2 class="section-title">Redes Sociales</h2>
+        
+        <a href="https://www.instagram.com/optica__kristel/" class="link-card" target="_blank">
+            <div class="icon instagram">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">Instagram</div>
+                <div class="link-subtitle">@optica__kristel</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@optica.kristel.jun" class="link-card" target="_blank">
+            <div class="icon tiktok">
+                <i class="fab fa-tiktok"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">TikTok - Sede Junín</div>
+                <div class="link-subtitle">@optica.kristel.jun</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@ptica.kristel" class="link-card" target="_blank">
+            <div class="icon tiktok">
+                <i class="fab fa-tiktok"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">TikTok - Sede Sánchez Cerro</div>
+                <div class="link-subtitle">@ptica.kristel</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://www.facebook.com/opticakristelpiura" class="link-card" target="_blank">
+            <div class="icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">Facebook</div>
+                <div class="link-subtitle">Óptica Kristel Piura</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://kristeloptica-bit.github.io/-ptica-kristel/" class="link-card" target="_blank">
+            <div class="icon web">
+                <i class="fas fa-globe"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">Sitio Web</div>
+                <div class="link-subtitle">Catálogo y más información</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <div class="decorative-line"></div>
+
+        <h2 class="section-title">WhatsApp</h2>
+
+        <a href="https://wa.me/51970798463" class="link-card" target="_blank">
+            <div class="icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">WhatsApp - Sede Junín</div>
+                <div class="link-subtitle">+51 970 798 463</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://wa.me/51944496830" class="link-card" target="_blank">
+            <div class="icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">WhatsApp - Sede Sánchez Cerro</div>
+                <div class="link-subtitle">+51 944 496 830</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <div class="decorative-line"></div>
+
+        <h2 class="section-title">Ubicaciones</h2>
+
+        <a href="https://maps.app.goo.gl/6fjxavn9Cn9J24Ck6" class="link-card" target="_blank">
+            <div class="icon location">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">Sede Junín</div>
+                <div class="link-subtitle">Ver en Google Maps</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <a href="https://maps.app.goo.gl/CWF1nnkthNxa5xSd6" class="link-card" target="_blank">
+            <div class="icon location">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="link-content">
+                <div class="link-title">Sede Sánchez Cerro</div>
+                <div class="link-subtitle">Ver en Google Maps</div>
+            </div>
+            <i class="fas fa-chevron-right arrow"></i>
+        </a>
+
+        <div class="footer">
+            <p>© 2024 Óptica Kristel - Piura, Perú</p>
+        </div>
+    </div>
+</body>
+</html>
